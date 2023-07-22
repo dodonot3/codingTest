@@ -6,7 +6,6 @@ function solution(sides) {
 // sort로 내림차순으로 배열 재정렬 
 // (EcmaScript 2023 toSorted는 안써짐..업데이트안되었나?)
 
-
 /*
 1. 배열에서 최대값 찾기 
     Math.max 안에 값이 와야하므로 배열을 넣을때는 스프레드 문법으로 배열을 풀어줘야 함.
