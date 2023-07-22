@@ -1,17 +1,16 @@
 function solution(n) {
     let num = n.toString();
         // n값 보존하면서 string으로 데이터 타입 변환
-    let strArr = num.split('');
+    let numArr = num.split('');
         // string을 substring으로 나눠 원소로 배열에 할당
-    let numArr = [];
-    for (const el of strArr){
-        numArr.push(Number(el));
-    }
-        // substring 들을 숫자 타입으로 변환 이방법이 최선인지..
-    return numArr.reduce((acc, cur)=> acc + cur);    
+    return numArr.reduce((acc, cur)=> acc+ Number(cur), 0);
+        // cur에 Number 메서드 사용하고 초기 값을 숫자로 0 지정 
 }
 
 /*
+2가지 방법으로 풀이 (+ 반복문 없이 개선 방법)
+
+
 0은 나눌수가 없으므로 0인 경우에만 예외처리
 
 반복문
@@ -55,8 +54,21 @@ function solution(n) {
     for (const el of strArr){
         numArr.push(Number(el));
     }
-        // substring 들을 숫자 타입으로 변환 이방법이 최선인지..
+        // substring 들을 숫자 타입으로 변환 이 방법이 최선인지..
     return numArr.reduce((acc, cur)=> acc + cur);    
+}
+
+------------------> 반복문 숫자 타입 변환 없이 암묵적 데이터타입 변환 이용해서 개선 방법
+cur에 Number 메서드 사용하고 초기 값을 숫자로 0 지정
+(처음에 reduce계산 전 numArr자체에 Number메서드를 사용해서 참조 에러가 발생한 것이었음. 배열이라서 변환 X)
+
+function solution(n) {
+    let num = n.toString();
+        // n값 보존하면서 string으로 데이터 타입 변환
+    let numArr = num.split('');
+        // string을 substring으로 나눠 원소로 배열에 할당
+    return numArr.reduce((acc, cur)=> acc+ Number(cur), 0);
+        // cur에 Number 메서드 사용하고 초기 값을 숫자로 0 지정 
 }
 
 */
