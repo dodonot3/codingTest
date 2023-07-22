@@ -1,10 +1,10 @@
 function solution(price) {
     return Math.floor(price < 100000 ? price 
         : price >= 100000 && price < 300000 
-            ? price - price * 0.05 
+            ? price * 0.95 
             : price >= 300000 && price < 500000
-                ? price - price * 0.1 
-                : price - price * 0.2);
+                ? price * 0.9
+                : price * 0.8);
 }
 /*
 가독성이 있는 삼항연산자로 풀이
