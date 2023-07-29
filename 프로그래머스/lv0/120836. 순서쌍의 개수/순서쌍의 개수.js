@@ -3,7 +3,7 @@ function solution(n) {
     for (let a = 1; a <= n; a++){
         if(n % a === 0) numArr.push(a);
     }
-    return [...new Set(numArr)].length;
+    return numArr.length;
 }
 
 /*
@@ -19,6 +19,6 @@ function solution(n) {
     for (let a = 1; a <= n; a++){
         if(n % a === 0) numArr.push(a);
     }
-    return [...new Set(numArr)].length;
+    return numArr.length;
 }
 */
