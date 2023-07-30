@@ -15,6 +15,15 @@ function solution(rsp) {
 요소에 해당하는 리턴값을 새 배열에 푸시
 새배열 리턴
 
+function solution(rsp) {
+    let newRsp = [];
+    for(const el of rsp){
+        if(el == 2){newRsp.push(0)}
+        else if(el == 0){newRsp.push(5)}
+        else if(el == 5){newRsp.push(2)}
+        return newRsp.join('');
+    }
+}
 -----------------------------------> 객체 활용해서 풀기
 function solution(rsp) {
     let newRsp = {
