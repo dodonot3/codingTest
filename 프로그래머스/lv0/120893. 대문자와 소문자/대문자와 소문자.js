@@ -10,3 +10,12 @@ function solution(my_string) {
     }
     return changeStr.join('');
 }
+
+/*
+for of와 삼항연산자로 바꾸는 법
+function solution(my_string) {
+    var answer = '';
+    for (let c of my_string) answer += c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase();
+    return answer;
+}
+*/
