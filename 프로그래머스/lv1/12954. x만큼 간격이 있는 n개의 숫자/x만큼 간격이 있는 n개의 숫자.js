@@ -7,3 +7,9 @@ function solution(x, n) {
     }
     return list;
 }
+/*
+필터와 맵을 사용해 하는 방법
+function solution(x, n) {
+    return Array(n).fill(x).map((v, i) => (i + 1) * v)
+}
+*/
